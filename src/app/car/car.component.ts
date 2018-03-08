@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-car',
@@ -7,7 +7,8 @@ import { Component} from '@angular/core';
 })
 export class CarComponent {
 
-  carName = 'FORD';
-  carYear = 2015;
+  // carName = 'FORD';
+  // carYear = 2015;
+  @Input() carItem: {name: string, year: number};
 
 }

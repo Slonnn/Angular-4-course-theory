@@ -1,11 +1,15 @@
-<input type="text" class="form-cotrol" [(ngModel)]="carName">
-<button class="btn btn-primary" (click)="addCar()">Добавить машину</button>
+<p>Форма добавления машин</p>
+<hr>
+<app-add-car (onAddCar)="updateCarList($event)"></app-add-car>
 <p *ngIf="!addCarStatus; else saccessStatus">Машина не добавлена</p>
 <ng-template #saccessStatus>
 <p>Машина добавлена</p>
 </ng-template>
 <hr>
-<!-- <app-car *ngFor="let car of cars"></app-car> -->
+<div class="list-group">
+    <app-car class="list-group-item" *ngFor="let car of carsYears" [carItem]="car"></app-car>
+</div>
+
 <!-- машины -->
 <ul>
     <li *ngFor="let car of cars; let index = index">
@@ -18,19 +22,6 @@
     </li>
 </ul>
 
-<!-- дата -->
-<ul>
-        <li *ngFor="let date of dates; let index = index">
-            <div>
-                <b>{{index + 1}}</b> - {{date | date}}
-            </div>
-            
-        </li>
-    </ul>
-<hr>
-
 <input type="text" class="form-control" (keyup.enter)="addText($event)">
 <hr>
-<input type="text" class="form-control" [(ngModel)]="inputText">
-
 <p>{{inputText}}</p>

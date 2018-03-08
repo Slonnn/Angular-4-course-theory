@@ -1,32 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-cars',
   templateUrl: './cars.component.html',
-  styleUrls: ['./cars.component.css']
+  styleUrls: ['./cars.component.css'],
+  encapsulation: ViewEncapsulation.None //глобально видны все стили
 })
 export class CarsComponent {
- 
-  carName = '';
+
+  carsYears: [{name: string, year: number}] = [{
+      name: 'Ford',
+      year: 2000
+    }
+  ]
   addCarStatus = false;
   cars = ['Ford', 'Audi-100', 'BMW', 'LADA', 'Bently', 'Mazda'];
-  dates = [
-    new Date(2015, 3, 4),
-    new Date(2005, 5, 8),
-    new Date(2009, 10, 2),
-    new Date(2056, 5, 7)
-  ];
-
-  inputText = 'Default text';
+  inputText = '';
 
   constructor(){
 
   }
 
-  addCar(){
-    this.addCarStatus = true;
-    this.cars.push(this.carName);
-    this.carName = '';
+  updateCarList(car: {name: string, year: number}){
+    this.carsYears.push(car)
   }
 
   addText(event: Event){
