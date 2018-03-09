@@ -1,0 +1,15 @@
+<ul class="list-group">
+  <li *ngFor="let item of items" (click)="onClick(item)" class="list-group-item">{{item}}</li>
+</ul>
+
+<div [ngSwitch]="current">
+  <p *ngSwitchCase="1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita provident repudiandae quia impedit consequatur et dignissimos nihil, culpa itaque, ad vero. Ipsa architecto atque officiis voluptates fuga magni delectus ratione.</p>
+  <p *ngSwitchCase="2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere asperiores, quo doloribus blanditiis placeat neque distinctio natus! Omnis, vel eaque rem quibusdam, suscipit, nostrum a veniam placeat alias officia dolorem?
+  Fugiat aperiam non iste. Ut doloremque ipsum distinctio? Iste harum, praesentium, accusamus necessitatibus fugit cumque et quod officiis amet, porro aperiam? Officiis similique blanditiis iusto, labore ipsum perferendis dolore natus!
+  Molestiae doloremque, laboriosam sint minus labore nihil quae id aut fugit eligendi fuga cum ipsum magnam odio voluptate ea, aspernatur, sequi sed? Perspiciatis rerum laudantium dolorem, praesentium aut sit accusantium.</p>
+  <p *ngSwitchCase="3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nesciunt veniam quibusdam alias doloribus enim commodi impedit minus repellendus. Magni delectus deleniti nihil voluptas vero sapiente incidunt aspernatur eum expedita!
+  Facere perspiciatis ducimus non excepturi velit, saepe ipsa quibusdam libero, quidem maxime tenetur voluptatum? Quaerat quidem fugit quos? Error repellat impedit sint dolorum quasi totam voluptate non enim cum laborum.
+  Neque officiis tempore cum voluptas. Temporibus dicta commodi, et, totam laborum voluptatem amet hic accusantium itaque nihil repellat nemo, ullam blanditiis error deserunt voluptatibus dolorem sunt earum minima saepe aperiam!
+  Excepturi eligendi, eaque itaque unde nesciunt illum neque dignissimos facere cum delectus deleniti quam, magnam perferendis, iusto dolorem! Reiciendis beatae impedit voluptatibus nostrum autem corrupti. Vel asperiores tempora aperiam magnam.</p>
+  <p *ngSwitchDefault>4</p>
+</div>

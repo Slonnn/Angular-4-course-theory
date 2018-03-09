@@ -7,7 +7,9 @@
 </ng-template>
 <hr>
 <div class="list-group">
-    <app-car class="list-group-item" *ngFor="let car of carsYears" [carItem]="car"></app-car>
+    <app-car class="list-group-item" *ngFor="let car of carsYears" [carItem]="car">
+        <div class="alert alert-info">Машина продана!!!</div>
+    </app-car>
 </div>
 
 <!-- машины -->
